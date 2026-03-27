@@ -250,6 +250,26 @@
       padding: 8rem 0 6rem;
     }
 
+    .hero-logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      animation: fadeUp .8s var(--ease) both;
+    }
+    /* Arabic logo: dark bg blends into hero — no container needed */
+    html[lang="ar"] .hero-logo-wrap img.ar {
+      height: 220px;
+      border-radius: 8px;
+    }
+    /* English logo: white bg — show as a clean white card */
+    html[lang="en"] .hero-logo-wrap img.en {
+      height: 180px;
+      background: var(--white);
+      padding: 1.2rem 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.25);
+    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -662,6 +682,11 @@
 
   <div class="container">
     <div class="hero-content">
+
+      <div class="hero-logo-wrap">
+        <img class="ar" src="logo-02.png" alt="MADAPATH" />
+        <img class="en" src="logo-dark.png" alt="MADAPATH" />
+      </div>
 
       <div class="hero-badge">
         <span class="dot"></span>
